@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>ManagerApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
@@ -83,6 +83,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.5.0</version>
+				<configuration>
+					<parametrs>true</parametrs>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 	<repositories>
@@ -105,5 +115,6 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
+
 
 </project>
