@@ -41,5 +41,10 @@ public class DefaultProductService implements ProductService {
                 );
     }
 
+    @Override
+    public void deleteProduct(Integer id) {
+        this.productRepository.deleteById(id);
+    }
+
 
 }

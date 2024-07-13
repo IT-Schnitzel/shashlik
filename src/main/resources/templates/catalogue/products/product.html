@@ -14,5 +14,10 @@
     <li><strong>Описание</strong> : <span data-th-text="${product.details}"></span> </li>
 </ul>
 <a data-th-href="@{/catalogue/products/{productId}/edit(productId=${product.id})}"> Редактировать товар</a>
+
+<form method="post" data-th-action="@{http://localhost:8080/catalogue/products/{productId}/delete(productId=${product.id})}">
+    <button type="submit">удалить</button>
+</form>
+
 </body>
 </html>
