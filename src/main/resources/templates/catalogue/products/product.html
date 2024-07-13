@@ -9,9 +9,10 @@
 <a data-th-href="@{http://localhost:8080/catalogue/products/list}">&larr; К списку товаров</a>
 <h1 data-th-text="${product.title}"></h1>
 <ul>
-    <li><strong>ID</strong> : <span data-th-text="${product.id}"></spandata-th-text></span> </li>
-    <li><strong>Название</strong> : <span data-th-text="${product.title}"></spandata-th-text></span> </li>
+    <li><strong>ID</strong> : <span data-th-text="${product.id}"></span></span> </li>
+    <li><strong>Название</strong> : <span data-th-text="${product.title}"></span></li>
     <li><strong>Описание</strong> : <span data-th-text="${product.details}"></span> </li>
 </ul>
+<a data-th-href="@{/catalogue/products/{productId}/edit(productId=${product.id})}"> Редактировать товар</a>
 </body>
 </html>
