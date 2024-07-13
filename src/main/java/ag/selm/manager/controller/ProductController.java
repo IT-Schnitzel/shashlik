@@ -22,7 +22,8 @@ public class ProductController {
 
     @ModelAttribute("product")
     public Product product(@PathVariable("productId") int productId){
-        return this.productService.findProduct(productId).orElseThrow();
+        return this.productService.findProduct(productId).
+                orElseThrow(()-> new NoSuchElementException("Товар не найден"));
     }
 
     @GetMapping()
