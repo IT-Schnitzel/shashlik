@@ -44,7 +44,7 @@ public class ProductController {
     }
 
     @PostMapping("edit")
-    public String updateProduct(@ModelAttribute("product") Product product, @Valid UpdateProductPayload payload,
+    public String updateProduct(@ModelAttribute(name = "product", binding = false) Product product, @Valid UpdateProductPayload payload,
                                 BindingResult bindingResult,
                                 Model model){
 
